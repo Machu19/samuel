@@ -1,0 +1,7 @@
+.foo p {
+  font-size: 12px; }
+
+.foo small {
+  font-size: 10px; }
+  .foo small:hover {
+    color: blue; }

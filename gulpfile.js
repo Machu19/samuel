@@ -1,10 +1,13 @@
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require ('gulp-concat');
+var sass = require('gulp-sass');
 
+gulp.task('styles', function() {
+    gulp.src('sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css/'))
+});
+
+//Watch task
 gulp.task('default',function() {
-	gulp.src('css/main.css')
-	.pipe(concat('all.min.css'))
-	.pipe(uglify())
-	.pipe(gulp.dest('dupa'));
+    gulp.watch('sass/**/*.scss',['styles']);
 });
