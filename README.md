@@ -1,2 +1,2 @@
-# samuel
-gówno dupa
+# Samuel
+Schody
